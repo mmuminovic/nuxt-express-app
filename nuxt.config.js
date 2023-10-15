@@ -1,4 +1,5 @@
 export default {
+  target: 'server',
   ssr: true,
   head: {
     title: process.env.npm_package_name || '',
@@ -19,8 +20,10 @@ export default {
     '/api': '~/api'
   },
   server: {
-    port: process.env.PORT || 3000, // Set a default or use the environment variable PORT
+    port: process.env.PORT || 3000,
     host: '0.0.0.0'
   },
-  build: {}
+  axios: {
+    credentials: true
+  }
 }
