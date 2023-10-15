@@ -1,0 +1,36 @@
+{
+  "name": "mynuxtapp",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "yarn lint:js",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "db:migrate": "cd ./api && npx sequelize-cli db:migrate",
+    "db:seed": "cd ./api && npx sequelize-cli db:seed:all"
+  },
+  "dependencies": {
+    "@nuxt/http": "latest",
+    "@nuxtjs/axios": "^5.13.6",
+    "bcryptjs": "^2.4.3",
+    "bootstrap-vue": "^2.23.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "latest",
+    "jsonwebtoken": "^9.0.2",
+    "nuxt": "^2.17.1",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.33.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^5.0.0",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.20.0",
+    "eslint-plugin-nuxt": "^2.0.0"
+  }
+}
